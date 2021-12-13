@@ -25,4 +25,4 @@ exports.compileSASS = buildStyles;
 exports.compileSASS2 = buildStyles2;
 exports.copyBootstrapJS = copy;
 
-exports.build = series(buildStyles2);
+exports.build = series(buildStyles2, copy);
