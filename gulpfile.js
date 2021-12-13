@@ -1,7 +1,8 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass')(require('sass'));
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const { series } = require('gulp');
 
 function buildStyles() {
   return gulp.src('./lib/bootstrap-5.1.3/scss/**/*.scss')
@@ -15,5 +16,13 @@ function buildStyles2() {
     .pipe(gulp.dest('./css'));
 };
 
+function copy() {
+  return gulp.src('./node_modules/**/bootstrap.bundle.min.js')
+    .pipe(gulp.dest('./js'));
+}
+
 exports.compileSASS = buildStyles;
 exports.compileSASS2 = buildStyles2;
+exports.copyBootstrapJS = copy;
+
+exports.build = series(buildStyles2, copy);

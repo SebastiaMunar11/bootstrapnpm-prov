@@ -1,7 +1,6 @@
 {
   "name": "getstartedbootstrap",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "directories": {
     "lib": "lib"
@@ -18,5 +17,14 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "sass": "^1.43.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastiaMunar11/bootstrapnpm-prov.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SebastiaMunar11/bootstrapnpm-prov/issues"
+  },
+  "homepage": "https://github.com/SebastiaMunar11/bootstrapnpm-prov#readme",
+  "description": ""
 }
